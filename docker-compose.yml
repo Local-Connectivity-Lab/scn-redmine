@@ -18,7 +18,7 @@ services:
       retries: 10
   redmine:
     build: .
-    #image: docker.io/bitnami/redmine:5
+    #image: docker.io/bitnami/redmine:latest
     ports:
       - '80:3000'
     volumes:
