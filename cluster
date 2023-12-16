@@ -122,7 +122,8 @@ cmd_import() {
 
 cmd_backup() {
     # generate a datestamp for YYYYmmHHMM; the current time to the minute
-	datestr="$(date +%Y%m%H%M)"
+    #"+DATE: %Y-%m-%d%nTIME: %H:%M:%S"
+	datestr="$(date +%Y%m%d%H%M)"
 	backupdir="$project-$datestr"
 	mkdir -p "$backupdir"
 	
