@@ -36,23 +36,21 @@ sudo snap install yq
 
 ### Deploy
 
-1. Clone the repo `https://github.com/philion/scn-redmine`.
-2. Copy the `sample.env` file to `.env` and update the passwords:
+1. Clone the repo `https://github.com/Local-Connectivity-Lab/scn-redmine`.
 ```
-git clone https://github.com/philion/scn-redmine redmine
+git clone https://github.com/Local-Connectivity-Lab/scn-redmine redmine
 cd redmine
-cp sample.env .env
-chmod 600 .env
 ```
-3. Update the `.env` file with the correct passwords:
-```
-REDMINE_SMTP_PASSWORD=your_password
-REDMINE_IMAP_PASSWORD=your_password
-```
-4. Deploy into a standard Docker engine:
+2. Deploy into a standard Docker engine:
 ```
 ./cluster up
 ```
+
+or `docker compose up --build -d`
+
+### Initial Setup
+* Login, create admin user
+* Create custom fields: Discord ID, syncdata, to-cc
 
 ### Backup and Restore
 
