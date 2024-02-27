@@ -54,21 +54,6 @@ REDMINE_IMAP_PASSWORD=your_password
 ./cluster up
 ```
 
-### Configure IMAP
-
-Incoming IMAP email is handled by adding a cron job running on the Docker host:
-```
-sudo crontab -e
-```
-and add the following entry to the bottom:
-```
-*/5 * * * * docker exec -t redmine-redmine-1 /opt/bitnami/redmine/cron-imap.sh 2>&1 | /usr/bin/logger -t redmine-imap
-```	
-
-This cron job uses docker to execute the imap job inside the redmine container, and capture std and err output to syslog (tagged "redmine-imap").
-
-> NOTE: redmine-redmine-1 is the expected container name once this compose file is deployed. This might not be correct for your system, check with `./cluster status`
-
 ### Backup and Restore
 
 The provided `cluster` script handles creating backups and restoring the cluster state from them.
@@ -122,10 +107,3 @@ Restoring the backup file with 'cluster restore backup-file.tgz'
 * https://bitnami.com/stack/redmine/containers
 * https://www.redmine.org/projects/redmine/wiki/RedmineReceivingEmails
 * https://github.com/BretFisher/docker-vackup
-
-## TODO
-
-* TODO Add `crontab` command to `cluster` to update crontab with imap job, which can automatically determine the correct container.
-* TODO: Update usage docs, with new cmds and input feedback	 
-* TODO add pre-check to cluster script for tools: docker, yq
-* TODO should the cluster script be verbose requarding the commands it issues, to support learning?
