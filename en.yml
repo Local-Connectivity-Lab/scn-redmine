@@ -209,7 +209,7 @@ en:
   notice_issue_not_closable_by_open_tasks: "This ticket cannot be closed because it has at least one open subtask."
   notice_issue_not_closable_by_blocking_issue: "This ticket cannot be closed because it is blocked by at least one open ticket."
   notice_issue_not_reopenable_by_closed_parent_issue: "This ticket cannot be reopened because its parent ticket is closed."
-  notice_invalid_watcher: "Invalid watcher: User will not receive any notifications because it does not have access to view this object."
+  notice_invalid_watcher: "Invalid collaborator: User will not receive any notifications because it does not have access to view this object."
 
   error_can_t_load_default_data: "Default configuration could not be loaded: %{value}"
   error_scm_not_found: "The entry or revision was not found in the repository."
@@ -383,7 +383,7 @@ en:
   field_comments_sorting: Display comments
   field_parent_title: Parent page
   field_editable: Editable
-  field_watcher: Watcher
+  field_watcher: Collaborator
   field_content: Content
   field_group_by: Group results by
   field_sharing: Sharing
@@ -561,9 +561,9 @@ en:
   permission_save_queries: Save queries
   permission_view_gantt: View gantt chart
   permission_view_calendar: View calendar
-  permission_view_issue_watchers: View watchers list
-  permission_add_issue_watchers: Add watchers
-  permission_delete_issue_watchers: Delete watchers
+  permission_view_issue_watchers: View collaborators list
+  permission_add_issue_watchers: Add collaborator
+  permission_delete_issue_watchers: Delete collaborators
   permission_log_time: Log spent time
   permission_view_time_entries: View spent time
   permission_edit_time_entries: Edit time logs
@@ -584,9 +584,9 @@ en:
   permission_view_wiki_edits: View wiki history
   permission_edit_wiki_pages: Edit wiki pages
   permission_delete_wiki_pages_attachments: Delete attachments
-  permission_view_wiki_page_watchers: View wiki page watchers list
-  permission_add_wiki_page_watchers: Add wiki page watchers
-  permission_delete_wiki_page_watchers: Delete wiki page watchers
+  permission_view_wiki_page_watchers: View wiki page collaborators list
+  permission_add_wiki_page_watchers: Add wiki page collaborators
+  permission_delete_wiki_page_watchers: Delete wiki page collaborators
   permission_protect_wiki_pages: Protect wiki pages
   permission_manage_repository: Manage repository
   permission_browse_repository: Browse repository
@@ -599,9 +599,9 @@ en:
   permission_edit_own_messages: Edit own messages
   permission_delete_messages: Delete messages
   permission_delete_own_messages: Delete own messages
-  permission_view_message_watchers: View message watchers list
-  permission_add_message_watchers: Add message watchers
-  permission_delete_message_watchers: Delete message watchers
+  permission_view_message_watchers: View message collaborators list
+  permission_add_message_watchers: Add message collaborators
+  permission_delete_message_watchers: Delete message collaborators
   permission_export_wiki_pages: Export wiki pages
   permission_manage_subtasks: Manage subtasks
   permission_manage_related_issues: Manage related tickets
@@ -896,7 +896,7 @@ en:
   label_options: Options
   label_copy_workflow_from: Copy workflow from
   label_permissions_report: Permissions report
-  label_watched_issues: Watched tickets
+  label_watched_issues: Collaboratored tickets
   label_related_issues: Related tickets
   label_applied_status: Applied status
   label_loading: Loading...
@@ -958,9 +958,9 @@ en:
   label_user_mail_option_all: "For any event on all my projects"
   label_user_mail_option_selected: "For any event on the selected projects only..."
   label_user_mail_option_none: "No events"
-  label_user_mail_option_only_my_events: "Only for things I watch or I'm involved in"
-  label_user_mail_option_only_assigned: "Only for things I own or watch"
-  label_user_mail_option_only_owner: "Only for things I watch or I am the owner of"
+  label_user_mail_option_only_my_events: "Only for things I collaborate with or I'm involved in"
+  label_user_mail_option_only_assigned: "Only for things I own or collaborate with"
+  label_user_mail_option_only_owner: "Only for things I collaborate with or I am the owner of"
   label_user_mail_no_self_notified: "I don't want to be notified of changes that I make myself"
   label_user_mail_notify_about_high_priority_issues_html: "Also notify me about tickets with a priority of <em>%{prio}</em> or higher"
   label_registration_activation_by_email: account activation by email
@@ -980,7 +980,7 @@ en:
   label_downloads_abbr: D/L
   label_optional_description: Optional description
   label_add_another_file: Add another file
-  label_auto_watch_on: Auto watch
+  label_auto_watch_on: Auto collaborate
   label_auto_watch_on_issue_created: Tickets I created
   label_auto_watch_on_issue_contributed_to: Tickets I contributed to
   label_preferences: Preferences
@@ -988,9 +988,9 @@ en:
   label_reverse_chronological_order: In reverse chronological order
   label_incoming_emails: Incoming emails
   label_generate_key: Generate a key
-  label_issue_watchers: Watchers
-  label_message_watchers: Watchers
-  label_wiki_page_watchers: Watchers
+  label_issue_watchers: Collaborators
+  label_message_watchers: Collaborators
+  label_wiki_page_watchers: Collaborators
   label_example: Example
   label_display: Display
   label_sort: Sort
@@ -1039,7 +1039,7 @@ en:
   label_copy_subtasks: Copy subtasks
   label_item_position: "%{position} of %{count}"
   label_completed_versions: Completed versions
-  label_search_for_watchers: Search for watchers to add
+  label_search_for_watchers: Search for collaborators to add
   label_session_expiration: Session expiration
   label_status_transitions: Status transitions
   label_fields_permissions: Fields permissions
@@ -1185,8 +1185,8 @@ en:
   button_sort: Sort
   button_log_time: Log time
   button_rollback: Rollback to this version
-  button_watch: Watch
-  button_unwatch: Unwatch
+  button_watch: Collaborate
+  button_unwatch: Uncollaborate
   button_reply: Reply
   button_archive: Archive
   button_unarchive: Unarchive
@@ -1279,7 +1279,7 @@ en:
   text_issue_category_destroy_question: "Some tickets (%{count}) are assigned to this category. What do you want to do?"
   text_issue_category_destroy_assignments: Remove category assignments
   text_issue_category_reassign_to: Reassign tickets to this category
-  text_user_mail_option: "For unselected projects, you will only receive notifications about things you watch or you're involved in (eg. tickets you're the author or owner)."
+  text_user_mail_option: "For unselected projects, you will only receive notifications about things you collaborate with or you're involved in (eg. tickets you're the author or owner)."
   text_no_configuration_data: "Roles, trackers, ticket statuses and workflow have not been configured yet.\nIt is highly recommended to load the default configuration. You will be able to modify it once loaded."
   text_load_default_configuration: Load the default configuration
   text_status_changed_by_changeset: "Applied in changeset %{value}."
