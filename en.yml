@@ -14,8 +14,24 @@ en:
     abbr_day_names: [Sun, Mon, Tue, Wed, Thu, Fri, Sat]
 
     # Don't forget the nil at the beginning; there's no such thing as a 0th month
-    month_names: [~, January, February, March, April, May, June, July, August, September, October, November, December]
-    abbr_month_names: [~, Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec]
+    month_names:
+      [
+        ~,
+        January,
+        February,
+        March,
+        April,
+        May,
+        June,
+        July,
+        August,
+        September,
+        October,
+        November,
+        December,
+      ]
+    abbr_month_names:
+      [~, Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec]
     # Used in date_select and datime_select.
     order:
       - :year
@@ -35,40 +51,40 @@ en:
     distance_in_words:
       half_a_minute: "half a minute"
       less_than_x_seconds:
-        one:   "less than 1 second"
+        one: "less than 1 second"
         other: "less than %{count} seconds"
       x_seconds:
-        one:   "1 second"
+        one: "1 second"
         other: "%{count} seconds"
       less_than_x_minutes:
-        one:   "less than a minute"
+        one: "less than a minute"
         other: "less than %{count} minutes"
       x_minutes:
-        one:   "1 minute"
+        one: "1 minute"
         other: "%{count} minutes"
       about_x_hours:
-        one:   "about 1 hour"
+        one: "about 1 hour"
         other: "about %{count} hours"
       x_hours:
-        one:   "1 hour"
+        one: "1 hour"
         other: "%{count} hours"
       x_days:
-        one:   "1 day"
+        one: "1 day"
         other: "%{count} days"
       about_x_months:
-        one:   "about 1 month"
+        one: "about 1 month"
         other: "about %{count} months"
       x_months:
-        one:   "1 month"
+        one: "1 month"
         other: "%{count} months"
       about_x_years:
-        one:   "about 1 year"
+        one: "about 1 year"
         other: "about %{count} years"
       over_x_years:
-        one:   "over 1 year"
+        one: "over 1 year"
         other: "over %{count} years"
       almost_x_years:
-        one:   "almost 1 year"
+        one: "almost 1 year"
         other: "almost %{count} years"
 
   number:
@@ -92,7 +108,7 @@ en:
           gb: "GB"
           tb: "TB"
 
-# Used in array.to_sentence.
+  # Used in array.to_sentence.
   support:
     array:
       sentence_connector: "and"
@@ -102,8 +118,8 @@ en:
     errors:
       template:
         header:
-          one:    "1 error prohibited this %{model} from being saved"
-          other:  "%{count} errors prohibited this %{model} from being saved"
+          one: "1 error prohibited this %{model} from being saved"
+          other: "%{count} errors prohibited this %{model} from being saved"
       messages:
         inclusion: "is not included in the list"
         exclusion: "is reserved"
@@ -140,17 +156,17 @@ en:
 
   actionview_instancetag_blank_option: Please select
 
-  general_text_No: 'No'
-  general_text_Yes: 'Yes'
-  general_text_no: 'no'
-  general_text_yes: 'yes'
-  general_lang_name: 'English'
-  general_csv_separator: ','
-  general_csv_decimal_separator: '.'
+  general_text_No: "No"
+  general_text_Yes: "Yes"
+  general_text_no: "no"
+  general_text_yes: "yes"
+  general_lang_name: "English"
+  general_csv_separator: ","
+  general_csv_decimal_separator: "."
   general_csv_encoding: ISO-8859-1
   general_pdf_fontname: freesans
   general_pdf_monospaced_fontname: freemono
-  general_first_day_of_week: '7'
+  general_first_day_of_week: "7"
 
   notice_account_updated: Account was successfully updated.
   notice_account_invalid_credentials: Invalid user or password
@@ -200,18 +216,18 @@ en:
   error_scm_command_failed: "An error occurred when trying to access the repository: %{value}"
   error_scm_annotate: "The entry does not exist or cannot be annotated."
   error_scm_annotate_big_text_file: "The entry cannot be annotated, as it exceeds the maximum text file size."
-  error_issue_not_found_in_project: 'The ticket was not found or does not belong to this project'
-  error_no_tracker_in_project: 'No tracker is associated to this project. Please check the Project settings.'
+  error_issue_not_found_in_project: "The ticket was not found or does not belong to this project"
+  error_no_tracker_in_project: "No tracker is associated to this project. Please check the Project settings."
   error_no_default_issue_status: 'No default ticket status is defined. Please check your configuration (Go to "Administration -> Ticket statuses").'
   error_can_not_delete_custom_field: Unable to delete custom field
   error_can_not_delete_tracker: "This tracker contains tickets and cannot be deleted."
   error_can_not_remove_role: "This role is in use and cannot be deleted."
-  error_can_not_reopen_issue_on_closed_version: 'A ticket assigned to a closed version cannot be reopened'
+  error_can_not_reopen_issue_on_closed_version: "A ticket assigned to a closed version cannot be reopened"
   error_can_not_archive_project: This project cannot be archived
   error_issue_done_ratios_not_updated: "Ticket done ratios not updated."
-  error_workflow_copy_source: 'Please select a source tracker or role'
-  error_workflow_copy_target: 'Please select target tracker(s) and role(s)'
-  error_unable_delete_issue_status: 'Unable to delete ticket status (%{value})'
+  error_workflow_copy_source: "Please select a source tracker or role"
+  error_workflow_copy_target: "Please select target tracker(s) and role(s)"
+  error_unable_delete_issue_status: "Unable to delete ticket status (%{value})"
   error_unable_to_connect: "Unable to connect (%{value})"
   error_attachments_too_many: "This file cannot be uploaded because it exceeds the maximum number of files that can be attached simultaneously (%{max_number_of_files})"
   error_attachment_too_big: "This file cannot be uploaded because it exceeds the maximum allowed file size (%{max_size})"
@@ -247,10 +263,10 @@ en:
   error_query_statement_invalid: "An error occurred while executing the query and has been logged. Please report this error to your Redmine administrator."
 
   mail_subject_lost_password: "Your %{value} password"
-  mail_body_lost_password: 'To change your password, click on the following link:'
-  mail_body_lost_password_validity: 'Please be aware that you may change the password only once using this link.'
+  mail_body_lost_password: "To change your password, click on the following link:"
+  mail_body_lost_password_validity: "Please be aware that you may change the password only once using this link."
   mail_subject_register: "Your %{value} account activation"
-  mail_body_register: 'To activate your account, click on the following link:'
+  mail_body_register: "To activate your account, click on the following link:"
   mail_body_account_information_external: "You can use your %{value} account to log in."
   mail_body_account_information: Your account information
   mail_subject_account_activation_request: "%{value} account activation request"
@@ -273,7 +289,6 @@ en:
   mail_destroy_project_failed: Project %{value} could not be deleted.
   mail_destroy_project_successful: Project %{value} was deleted successfully.
   mail_destroy_project_with_subprojects_successful: Project %{value} and its subprojects were deleted successfully.
-
 
   field_name: Name
   field_description: Description
@@ -309,7 +324,7 @@ en:
   field_tracker: Tracker
   field_subject: Subject
   field_due_date: Due date
-  field_assigned_to: Assignee
+  field_assigned_to: Owner
   field_priority: Priority
   field_fixed_version: Target version
   field_user: User
@@ -357,7 +372,7 @@ en:
   field_is_filter: Used as a filter
   field_issue_to: Related ticket
   field_delay: Delay
-  field_assignable: Tickets can be assigned to users with this role
+  field_assignable: Tickets can be owned by users with this role
   field_redirect_existing_links: Redirect existing links
   field_estimated_hours: Estimated time
   field_column_names: Columns
@@ -374,8 +389,8 @@ en:
   field_sharing: Sharing
   field_parent_issue: Parent task
   field_parent_issue_subject: Parent task subject
-  field_member_of_group: "Assignee's group"
-  field_assigned_to_role: "Assignee's role"
+  field_member_of_group: "Owner's group"
+  field_assigned_to_role: "Owner's role"
   field_text: Text field
   field_visible: Visible
   field_warn_on_leaving_unsaved: "Warn me when leaving a page with unsaved text"
@@ -408,7 +423,7 @@ en:
   field_last_updated_by: Last updated by
   field_full_width_layout: Full width layout
   field_digest: Checksum
-  field_default_assigned_to: Default assignee
+  field_default_assigned_to: Default owner
   field_recently_used_projects: Number of recently used projects in jump box
   field_history_default_tab: Ticket's history default tab
   field_unique_id: Unique ID
@@ -469,7 +484,7 @@ en:
   setting_repository_log_display_limit: Maximum number of revisions displayed on file log
   setting_password_max_age: Require password change after
   setting_password_min_length: Minimum password length
-  setting_password_required_char_classes : Required character classes for passwords
+  setting_password_required_char_classes: Required character classes for passwords
   setting_lost_password: Allow password reset via email
   setting_new_project_user_role_id: Role given to a non-admin user who creates a project
   setting_default_projects_modules: Default enabled modules for new projects
@@ -484,7 +499,7 @@ en:
   setting_commit_logtime_activity_id: Activity for logged time
   setting_gantt_items_limit: Maximum number of items displayed on the gantt chart
   setting_gantt_months_limit: Maximum number of months displayed on the gantt chart
-  setting_issue_group_assignment: Allow ticket assignment to groups
+  setting_issue_group_assignment: Allow groups to own tickets
   setting_default_issue_start_date_to_creation_date: Use current date as start date for new tickets
   setting_commit_cross_project_ref: Allow tickets of all the other projects to be referenced and fixed
   setting_unsubscribe: Allow users to delete their own account
@@ -612,8 +627,8 @@ en:
   label_project_new: New project
   label_project_plural: Projects
   label_x_projects:
-    zero:  no projects
-    one:   1 project
+    zero: no projects
+    one: 1 project
     other: "%{count} projects"
   label_project_all: All Projects
   label_project_latest: Latest projects
@@ -626,7 +641,7 @@ en:
   label_issue_updated: Ticket updated
   label_issue_note_added: Note added
   label_issue_status_updated: Status updated
-  label_issue_assigned_to_updated: Assignee updated
+  label_issue_assigned_to_updated: Owner updated
   label_issue_priority_updated: Priority updated
   label_issue_fixed_version_updated: Target version updated
   label_document: Document
@@ -672,8 +687,8 @@ en:
   label_logout: Sign out
   label_help: Help
   label_reported_issues: Reported tickets
-  label_assigned_issues: Assigned tickets
-  label_assigned_to_me_issues: Tickets assigned to me
+  label_assigned_issues: Owned tickets
+  label_assigned_to_me_issues: Tickets I own
   label_updated_issues: Updated tickets
   label_registered_on: Registered on
   label_activity: Activity
@@ -727,7 +742,7 @@ en:
   label_version_and_files: Versions (%{count}) and Files
   label_close_versions: Close completed versions
   label_confirmation: Confirmation
-  label_export_to: 'Also available in:'
+  label_export_to: "Also available in:"
   label_read: Read...
   label_public_projects: Public projects
   label_open_issues: open
@@ -735,16 +750,16 @@ en:
   label_closed_issues: closed
   label_closed_issues_plural: closed
   label_x_open_issues_abbr:
-    zero:  0 open
-    one:   1 open
+    zero: 0 open
+    one: 1 open
     other: "%{count} open"
   label_x_closed_issues_abbr:
-    zero:  0 closed
-    one:   1 closed
+    zero: 0 closed
+    one: 1 closed
     other: "%{count} closed"
   label_x_issues:
-    zero:  0 tickets
-    one:   1 ticket
+    zero: 0 tickets
+    one: 1 ticket
     other: "%{count} tickets"
   label_total: Total
   label_total_plural: Totals
@@ -788,8 +803,8 @@ en:
   label_in_more_than: in more than
   label_in_the_next_days: in the next
   label_in_the_past_days: in the past
-  label_greater_or_equal: '>='
-  label_less_or_equal: '<='
+  label_greater_or_equal: ">="
+  label_less_or_equal: "<="
   label_between: between
   label_in: in
   label_today: today
@@ -944,7 +959,7 @@ en:
   label_user_mail_option_selected: "For any event on the selected projects only..."
   label_user_mail_option_none: "No events"
   label_user_mail_option_only_my_events: "Only for things I watch or I'm involved in"
-  label_user_mail_option_only_assigned: "Only for things I watch or I am assigned to"
+  label_user_mail_option_only_assigned: "Only for things I own or watch"
   label_user_mail_option_only_owner: "Only for things I watch or I am the owner of"
   label_user_mail_no_self_notified: "I don't want to be notified of changes that I make myself"
   label_user_mail_notify_about_high_priority_issues_html: "Also notify me about tickets with a priority of <em>%{prio}</em> or higher"
@@ -1012,10 +1027,10 @@ en:
   label_principal_search: "Search for user or group:"
   label_user_search: "Search for user:"
   label_additional_workflow_transitions_for_author: Additional transitions allowed when the user is the author
-  label_additional_workflow_transitions_for_assignee: Additional transitions allowed when the user is the assignee
+  label_additional_workflow_transitions_for_assignee: Additional transitions allowed when the user is the owner
   label_issues_visibility_all: All tickets
   label_issues_visibility_public: All non private tickets
-  label_issues_visibility_own: Tickets created by or assigned to the user
+  label_issues_visibility_own: Tickets created by or owned to the user
   label_git_report_last_commit: Report last commit for files and directories
   label_parent_revision: Parent
   label_child_revision: Child
@@ -1036,7 +1051,7 @@ en:
   label_attribute_of_project: "Project's %{name}"
   label_attribute_of_issue: "Ticket's %{name}"
   label_attribute_of_author: "Author's %{name}"
-  label_attribute_of_assigned_to: "Assignee's %{name}"
+  label_attribute_of_assigned_to: "Owner's %{name}"
   label_attribute_of_user: "User's %{name}"
   label_attribute_of_fixed_version: "Target version's %{name}"
   label_attribute_of_object: "%{object_name}'s %{name}"
@@ -1134,7 +1149,7 @@ en:
   label_display_type_list: List
   label_display_type_board: Board
   label_my_bookmarks: My bookmarks
-  label_assign_to_me: Assign to me
+  label_assign_to_me: Owned by me
   label_default_query: Default query
   label_edited: Edited
   label_time_by_author: "%{time} by %{author}"
@@ -1234,7 +1249,7 @@ en:
   text_project_close_confirmation: Are you sure you want to close the '%{value}' project to make it read-only?
   text_project_reopen_confirmation: Are you sure you want to reopen the '%{value}' project?
   text_project_archive_confirmation: Are you sure you want to archive the '%{value}' project?
-  text_users_bulk_destroy_head: 'You are about to delete the following users and remove all references to them. This cannot be undone. Often, locking users instead of deleting them is the better solution.'
+  text_users_bulk_destroy_head: "You are about to delete the following users and remove all references to them. This cannot be undone. Often, locking users instead of deleting them is the better solution."
   text_users_bulk_destroy_confirm: 'To confirm, please enter "%{yes}" below.'
   text_workflow_edit: Select a role and a tracker to edit the workflow
   text_are_you_sure: Are you sure?
@@ -1246,7 +1261,7 @@ en:
   text_tip_issue_begin_day: ticket beginning this day
   text_tip_issue_end_day: ticket ending this day
   text_tip_issue_begin_end_day: ticket beginning and ending this day
-  text_project_identifier_info: 'Only lower case letters (a-z), numbers, dashes and underscores are allowed.<br />Once saved, the identifier cannot be changed.'
+  text_project_identifier_info: "Only lower case letters (a-z), numbers, dashes and underscores are allowed.<br />Once saved, the identifier cannot be changed."
   text_caracters_maximum: "%{count} characters maximum."
   text_caracters_minimum: "Must be at least %{count} characters long."
   text_characters_must_contain: "Must contain %{character_classes}."
@@ -1264,15 +1279,15 @@ en:
   text_issue_category_destroy_question: "Some tickets (%{count}) are assigned to this category. What do you want to do?"
   text_issue_category_destroy_assignments: Remove category assignments
   text_issue_category_reassign_to: Reassign tickets to this category
-  text_user_mail_option: "For unselected projects, you will only receive notifications about things you watch or you're involved in (eg. tickets you're the author or assignee)."
+  text_user_mail_option: "For unselected projects, you will only receive notifications about things you watch or you're involved in (eg. tickets you're the author or owner)."
   text_no_configuration_data: "Roles, trackers, ticket statuses and workflow have not been configured yet.\nIt is highly recommended to load the default configuration. You will be able to modify it once loaded."
   text_load_default_configuration: Load the default configuration
   text_status_changed_by_changeset: "Applied in changeset %{value}."
   text_time_logged_by_changeset: "Applied in changeset %{value}."
-  text_issues_destroy_confirmation: 'Are you sure you want to delete the selected ticket(s)?'
+  text_issues_destroy_confirmation: "Are you sure you want to delete the selected ticket(s)?"
   text_issues_destroy_descendants_confirmation: "This will also delete %{count} subtask(s)."
-  text_time_entries_destroy_confirmation: 'Are you sure you want to delete the selected time entr(y/ies)?'
-  text_select_project_modules: 'Select modules to enable for this project:'
+  text_time_entries_destroy_confirmation: "Are you sure you want to delete the selected time entr(y/ies)?"
+  text_select_project_modules: "Select modules to enable for this project:"
   text_default_administrator_account_changed: Default administrator account changed
   text_file_repository_writable: Attachments directory writable
   text_plugin_assets_writable: Plugin assets directory writable
@@ -1284,15 +1299,15 @@ en:
   text_destroy_time_entries_question: "%{hours} hours were reported on the tickets you are about to delete. What do you want to do?"
   text_destroy_time_entries: Delete reported hours
   text_assign_time_entries_to_project: Assign reported hours to the project
-  text_reassign_time_entries: 'Reassign reported hours to this ticket:'
+  text_reassign_time_entries: "Reassign reported hours to this ticket:"
   text_user_wrote: "%{value} wrote:"
   text_user_wrote_in: "%{value} wrote in %{link}:"
   text_enumeration_destroy_question: "%{count} objects are assigned to the value “%{name}”."
-  text_enumeration_category_reassign_to: 'Reassign them to this value:'
+  text_enumeration_category_reassign_to: "Reassign them to this value:"
   text_email_delivery_not_configured: "Email delivery is not configured, and notifications are disabled.\nConfigure your SMTP server in config/configuration.yml and restart the application to enable them."
   text_repository_usernames_mapping: "Select or update the Redmine user mapped to each username found in the repository log.\nUsers with the same Redmine and repository username or email are automatically mapped."
-  text_diff_truncated: '... This diff was truncated because it exceeds the maximum size that can be displayed.'
-  text_custom_field_possible_values_info: 'One line for each value'
+  text_diff_truncated: "... This diff was truncated because it exceeds the maximum size that can be displayed."
+  text_custom_field_possible_values_info: "One line for each value"
   text_wiki_page_destroy_question: "This page has %{descendants} child page(s) and descendant(s). What do you want to do?"
   text_wiki_page_nullify_children: "Keep child pages as root pages"
   text_wiki_page_destroy_children: "Delete child pages and all their descendants"
@@ -1363,7 +1378,7 @@ en:
   description_all_columns: All Columns
   description_issue_category_reassign: Choose ticket category
   description_wiki_subpages_reassign: Choose new parent page
-  text_repository_identifier_info: 'Only lower case letters (a-z), numbers, dashes and underscores are allowed.<br />Once saved, the identifier cannot be changed.'
+  text_repository_identifier_info: "Only lower case letters (a-z), numbers, dashes and underscores are allowed.<br />Once saved, the identifier cannot be changed."
   text_login_required_html: When not requiring authentication, public projects and their contents are openly available on the network. You can <a href="%{anonymous_role_path}">edit the applicable permissions</a>.
   label_login_required_yes: "Yes"
   label_login_required_no: "No, allow anonymous access to public projects"
@@ -1376,7 +1391,7 @@ en:
   twofa__totp__name: Authenticator app
   twofa__totp__text_pairing_info_html: 'Scan this QR code or enter the plain text key into a TOTP app (e.g. <a href="https://support.google.com/accounts/answer/1066447">Google Authenticator</a>, <a href="https://authy.com/download/">Authy</a>, <a href="https://guide.duo.com/third-party-accounts">Duo Mobile</a>) and enter the code in the field below to activate two-factor authentication.'
   twofa__totp__label_plain_text_key: Plain text key
-  twofa__totp__label_activate: 'Enable authenticator app'
+  twofa__totp__label_activate: "Enable authenticator app"
   twofa_currently_active: "Currently active: %{twofa_scheme_name}"
   twofa_not_active: "Not activated"
   twofa_label_code: Code
