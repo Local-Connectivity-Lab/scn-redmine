@@ -1,7 +1,7 @@
 # Copyright VMware, Inc.
 # SPDX-License-Identifier: APACHE-2.0
 
-version: '2'
+version: '3'
 services:
   mariadb:
     image: docker.io/bitnami/mariadb:10.6
@@ -24,6 +24,7 @@ services:
       - '80:3000'
     volumes:
       - 'redmine_data:/bitnami/redmine'
+      - ./redmine-plugins:/bitnami/redmine/plugins
     depends_on:
       - mariadb
     environment:
@@ -38,6 +39,8 @@ services:
       - REDMINE_SMTP_USER=redmine@seattlecommunitynetwork.org
       - REDMINE_SMTP_PASSWORD=${REDMINE_SMTP_PASSWORD}
       - REDMINE_IMAP_PASSWORD=${REDMINE_IMAP_PASSWORD}
+      # for plugin support
+      - REDMINE_PLUGINS_MIGRATE=true
     healthcheck:
       test: curl --fail http://localhost:3000 || exit 1
       interval: 60s
