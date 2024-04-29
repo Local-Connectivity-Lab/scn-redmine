@@ -1,0 +1,3 @@
+[submodule "redmine-plugins/kanban"]
+	path = redmine-plugins/kanban
+	url = https://github.com/happy-se-life/kanban
