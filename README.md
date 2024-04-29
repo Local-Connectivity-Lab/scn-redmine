@@ -89,8 +89,9 @@ docker compose up --build -d
 This process is used any time there is an update to the SCN Redmine container to deploy.
 
 ```
-cd redmine
+cd github/redmine
 git pull
+git submodule update --init --recursive
 docker compose down
 docker compose up --build -d
 ```
