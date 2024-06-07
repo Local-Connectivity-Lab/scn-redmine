@@ -97,41 +97,17 @@ docker compose up --build -d
 
 ### Backup and Restore
 
-The provided `cluster` script handles creating backups and restoring the cluster state from them.
-
-To create a backup:
+The redmine data is stored in a MySQL database, and can be backed up using standard `mysqldump`. However, this needs to be executed within the docker container, as below:
 ```
-docker compose down
-./cluster backup
-docker compose up -d
+docker exec mariadb mysqldump -u root bitnami_redmine | gzip > redmine-`date +%Y-%m-%d`.gz
 ```
-This will create a file named `clustername-datestamp.tgz`, like: redmine-202308051251.tgz
+This will create a new backup with an SQL dump, gzipped and datestamped: `redmine-2024-06-07.gz`
 
-To restore a cluster from backup:
+To restore from a backup:
 ```
-docker compose down
-./cluster restore redmine-202308051251.tgz
-docker compose up -d
+gzcat redmine-2024-06-07.gz | sudo docker exec -i -mariadb mysql -u root bitnami_redmine
 ```
-
-## Backup Process & Structure
-
-The backup file is created by `cluster backup` is a gzipped tar file wrapping a gzipped tar file for each volume mentioned in the `docker-compose.yml`. It is automatically named with the cluster name (the parent directory of the compose yaml) and a to-the-minute precise datestamp.
-
-The process for creating a backup:
-1. Creating a new date-stamped dir from the parent-dir name (same as compose): name-YYYYMMDDHHMM
-2. For each volume mentioned in the compose.yml
-   2.1 Run an empty container, with the volume and the backup dir mounted
-   2.2 Archive contents of volume: volume.tgz in the mounted backup dir, w/o parent-context
- 3. tar-gzip the entire backyp dir into name-YYYYMMDDHHMM.tgz
-
-Restoring the backup file with 'cluster restore backup-file.tgz'
-1. Untar the backup file
-2. For each tgz file in the backup:
-   2.1 Confirm a matching entry in the compose file
-   2.2 Run a simple container, mounting the volume and the backup
-   2.3 Import the backup into the volume with tar on the specific volume
- 3. Cleanup the backup dir (leaving the backup.tgz untouched)
+This will used the SQL backup file to recreate the redmine database at the point the backup was created.
 
 
 ## Further Reading
@@ -139,4 +115,3 @@ Restoring the backup file with 'cluster restore backup-file.tgz'
 * https://github.com/bitnami/containers/tree/main/bitnami/redmine#how-to-use-this-image
 * https://bitnami.com/stack/redmine/containers
 * https://www.redmine.org/projects/redmine/wiki/RedmineReceivingEmails
-* https://github.com/BretFisher/docker-vackup
