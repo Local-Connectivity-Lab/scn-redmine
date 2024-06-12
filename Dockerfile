@@ -1,4 +1,4 @@
-FROM docker.io/bitnami/redmine:5.0.5-debian-11-r35
+FROM docker.io/bitnami/redmine:5
 
 RUN apt-get update && apt-get install -y curl
 
