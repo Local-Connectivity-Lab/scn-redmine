@@ -51,7 +51,6 @@ TODOs for password migration:
     - [ ] `REDMINE_DATABASE_PASSWORD` -> `redmine_db_password.txt`
     - [ ] `REDMINE_SMTP_PASSWORD` -> `redmine_smtp_password.txt`
     - [ ] `REDMINE_IMAP_PASSWORD` -> `redmine_imap_password.txt`
-    - [ ] 
 - [ ] copy password files to target host
 - [ ] pull latest on target host
 - [ ] perform full deployment, confirm everything comes up.
