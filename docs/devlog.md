@@ -39,8 +39,8 @@ Process:
 - Start the service with: `docker compose up --build -d`
 - (complete initial setup)
 
-
-TODOs for password migration:
+### TODOs
+For setting up and validating secrets:
 - [ ] generate new passwords, and store in vaultwarden, for:
     - [ ] redmine db password for `bn_redmine`
     - [ ] redmine db root user password
