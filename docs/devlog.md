@@ -2,12 +2,29 @@
 
 As this project will probably get more attention soon, it seems approaite to keep better development documentation code to the code.
 
+## 2025-12-03
+
+After a version update broke something, somewhere, finally settling on rolling everything forward and taking out what doesn't work.
+
+After research, the versions are based on: https://raw.githubusercontent.com/bitnami/containers/main/bitnami/redmine/docker-compose.yml
+```
+services:
+  mariadb:
+    image: docker.io/bitnami/mariadb:11.4
+  redmine:
+    image: docker.io/bitnami/redmine:6
+```
+
+Also removed the kanban plugin, as that was leading to errors during initialization.
+
+
 ## 2025-11-07
 
 When discussing putting the redmine server on the internet, it seemed prudent to address some security issues before going fully public.
 
 First task: **Making sure all services use strong passwords, and passwords are stored securely.**
 
+Work rolled into branch.
 
 ### Research
 
