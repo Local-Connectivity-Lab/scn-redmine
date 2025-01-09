@@ -2,7 +2,27 @@
 
 As this project will probably get more attention soon, it seems approaite to keep better development documentation code to the code.
 
-## 2025-12-03
+## 2025-01-09
+
+Goal: Add kanban board.
+
+After research, this looks like the best option:
+* https://github.com/happy-se-life/kanban
+
+Bitnami docs about installing plugins:
+* https://github.com/bitnami/containers/blob/main/bitnami/redmine/README.md#configuration
+* https://docs.bitnami.com/virtual-machine/apps/redmine/configuration/install-plugins/
+
+Approach:
+1. Add `- ./redmine-plugins:/opt/bitnami/redmine/plugins` to redmine:volumes section of `docker-compose.yml`.
+2. Add `- REDMINE_DATA_TO_PERSIST=/opt/bitnami/redmine/config/configuration.yml /opt/bitnami/redmine/config/database.yml files public/plugin_assets` to redmine:environment section.
+
+3. `mkdir ./redmine-plugins`
+4. `git submodule add https://github.com/happy-se-life/kanban ./redmine-plugins/kanban` to import the submodule
+5. build: `docker compose down; docker compose up --build -d`
+
+
+## 2024-12-03
 
 After a version update broke something, somewhere, finally settling on rolling everything forward and taking out what doesn't work.
 
@@ -18,7 +38,7 @@ services:
 Also removed the kanban plugin, as that was leading to errors during initialization.
 
 
-## 2025-11-07
+## 2024-11-07
 
 When discussing putting the redmine server on the internet, it seemed prudent to address some security issues before going fully public.
 

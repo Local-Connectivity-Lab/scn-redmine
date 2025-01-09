@@ -22,6 +22,7 @@ services:
       - '80:3000'
     volumes:
       - 'redmine_data:/bitnami/redmine'
+      - ./redmine-plugins:/opt/bitnami/redmine/plugins
     depends_on:
       - mariadb
     environment:
